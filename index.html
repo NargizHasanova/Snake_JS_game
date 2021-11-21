@@ -62,16 +62,15 @@
 
         function render() {
             $(".area").html("");
+
             for (i = 0; i < 10; i++) {
                 for (j = 0; j < 10; j++) {
                     if (mass[i][j] == 2) {
-                        $(".area").append(`<div class="cell food" id="${i}_${j}"></div>`);
+                        $(".area").append('<div class="cell food"></div>')
                     } else if (mass[i][j] == 1) {
-                        $(".area").append(
-                            `<div class="cell snake" id="${i}_${j}"></div>`
-                        );
+                        $(".area").append('<div class="cell snake"></div>')
                     } else {
-                        $(".area").append(`<div class="cell" id="${i}_${j}"></div>`);
+                        $(".area").append('<div class="cell"></div>')
                     }
                 }
             }
